@@ -2,8 +2,8 @@ package area_framework
 
 import "context"
 
-// area 区域
-type area interface {
+// Area 区域
+type Area interface {
 
 	// OnReceiveHandler 消息接受处理器
 	OnReceiveHandler(ctx context.Context, msg *Message)
@@ -28,7 +28,7 @@ type AreaPanel interface {
 	WithBoardCaster(bc *BoardCaster)
 
 	// NewArea 新建一个区域
-	NewArea(x, y, w, h int) (*area, error)
+	NewArea(x, y, w, h int) (*Area, error)
 
 	// Move 移动该Panel下的所有Area
 	Move(x, y, delaW, deltaY int)
